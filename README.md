@@ -17,6 +17,7 @@ Many students hesitate to ask questions due to the fear of peer judgment. **Undo
 ---
 
 ## 🏗️ Repository Structure
+```text
 ├── lib/
 │   ├── screens/       # UI Layer (Classroom, Doubt Threads, Auth)
 │   ├── services/      # Backend Logic (Firebase Auth & Firestore)
