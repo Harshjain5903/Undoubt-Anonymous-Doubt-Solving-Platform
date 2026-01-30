@@ -1,58 +1,54 @@
-# Undoubt: Anonymous Doubt Solving Platform 🚀
+# Undoubt: Anonymous Doubt-Solving Platform 🚀
 
-Undoubt is a cross-platform mobile application built with **Flutter** and **Firebase** that provides a safe, anonymous space for students to ask questions and share knowledge. It bridges the gap between classroom hesitation and academic clarity through a structured, real-time "Classroom" ecosystem.
+**Undoubt** is a high-performance, cross-platform mobile application developed with **Flutter** and **Firebase**. It provides a secure, anonymous environment for students to seek academic clarity, eliminating the social barrier of asking questions in traditional classroom settings.
 
 ---
 
 ## 📌 Project Overview
-Many students feel intimidated asking questions in person or on public forums. **Undoubt** solves this by offering an anonymous-first approach where users can join virtual classrooms, post doubts with image support, and receive solutions from peers or instructors without the fear of judgment.
+Many students hesitate to ask questions due to the fear of peer judgment. **Undoubt** bridges this gap by offering an "Anonymous-First" ecosystem. Users can join virtual classrooms, post image-supported doubts, and engage in real-time knowledge sharing without revealing their identity.
 
 ### 🎯 Key Features
-* **Virtual Classrooms:** Create or enroll in classrooms using unique generated codes.
-* **Anonymous Engagement:** Post doubts and answers anonymously to encourage participation.
-* **Multi-modal Doubts:** Support for text and image-based questions for complex subjects (math, diagrams, etc.).
-* **Real-time Synchronization:** Powered by Firebase Firestore for instant updates across all users.
-* **Secure Authentication:** Integrated Google Sign-In for a seamless and verified user experience.
+* **Virtual Classrooms:** Create or join specialized study groups via unique invite codes.
+* **Anonymous Engagement:** Post questions and provide solutions anonymously to foster inclusive participation.
+* **Multi-modal Doubts:** Full support for text and high-resolution image uploads for complex problem-solving.
+* **Real-time Synchronization:** Utilizes Firebase Firestore for instantaneous updates and live collaboration.
+* **Secure Authentication:** Seamless and verified user onboarding via Google Sign-In integration.
 
 ---
 
-## 🏗️ Technical Architecture
+## 🏗️ Repository Structure
 ├── lib/
-│   ├── screens/       # UI Layers (Home, Classroom, Doubt, Settings)
-│   ├── services/      # Backend logic (Firebase Auth & Firestore)
-│   ├── helpers/       # Local storage & Shared Preferences
-│   └── main.dart      # Application entry point
-├── assets/            # UI components and branding imagery
-├── android/           # Android-specific configurations
-└── ios/               # iOS-specific configurations
+│   ├── screens/       # UI Layer (Classroom, Doubt Threads, Auth)
+│   ├── services/      # Backend Logic (Firebase Auth & Firestore)
+│   ├── helpers/       # Persistence (Shared Preferences)
+│   └── main.dart      # App Entry Point
+├── assets/            # Branding and UI Assets
+├── android/           # Native Android Configuration
+└── ios/               # Native iOS Configuration
 🛠️ Tech Stack
-Frontend: Flutter (Dart) for high-performance, cross-platform UI.
+Frontend: Flutter (Dart) – Delivering a consistent, native experience on Android & iOS.
 
-Backend: Firebase Authentication (Google Sign-In).
+Authentication: Firebase Auth – Secured via Google OAuth.
 
-Database: Cloud Firestore (NoSQL real-time database).
+Database: Cloud Firestore – Real-time NoSQL database for low-latency data syncing.
 
-Storage: Firebase Storage for hosting doubt-related images.
+Storage: Firebase Storage – Optimized hosting for user-generated image content.
 
-Local Storage: Shared Preferences for persistent user session management.
+🛠️ Technical Implementation
+1. Privacy-Centric Architecture
+Designed a custom logic layer that decouples public-facing profiles from user identities. This ensures complete anonymity for the student while maintaining backend security and data integrity.
 
-🛠️ Technical Implementation Highlights
-1. Anonymous Ecosystem
-Implemented a logic layer that decouples user identity from public posts while maintaining backend traceability for security. This ensures users feel safe while administrators can still manage content.
+2. Optimized Data Streams
+Leveraged Firestore’s listener-based architecture to build a reactive UI. The app handles concurrent classroom activity efficiently, ensuring that doubt threads update in real-time without manual refreshing.
 
-2. Scalable Database Design
-The Firestore schema is optimized for "Classroom" sub-collections, allowing the app to handle thousands of concurrent queries within specific doubt threads without performance degradation.
-
-3. Image Processing
-Integrated image_picker and Firebase Storage to allow users to upload high-resolution photos of their physical notes or textbooks directly into the doubt stream.
+3. Scalable File Management
+Implemented a robust image-handling pipeline using image_picker and Firebase Storage, enabling users to upload and view clear, compressed images of diagrams or handwritten notes.
 
 🚀 Getting Started
 Prerequisites
-Flutter SDK
+Flutter SDK (Version 3.0+)
 
-Dart 3.0+
-
-Firebase Project Credentials (google-services.json for Android / GoogleService-Info.plist for iOS)
+Firebase project credentials (google-services.json or GoogleService-Info.plist)
 
 Installation
 Clone the repository:
@@ -64,19 +60,10 @@ Install dependencies:
 
 Bash
 flutter pub get
-Configure Firebase: Place your google-services.json in android/app/.
-
 Run the application:
 
 Bash
 flutter run
-📈 Future Roadmap
-Push Notifications: Alerting users when their doubts are answered.
-
-AI Integration: Automated doubt categorization and basic AI-generated hints.
-
-Web Support: Expanding the Flutter codebase to support a desktop/web browser version.
-
 👨‍💻 Author
 Harsh Jain Computer Science Graduate Student at UIC
 
